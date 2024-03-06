@@ -8,7 +8,7 @@
 #include "fsl_debug_console.h"
 
 #include "lcd.h"
-#include "KI_Logo.h"
+#include "imag.h"
 
 int main(void)
 {
@@ -24,9 +24,7 @@ int main(void)
 
 	LCD_Init(FLEXCOMM8_PERIPHERAL);
 
-	LCD_Clear(rgb(255, 182, 193));
-	LCD_Draw_Circle(50, 50, 50, _RED);
-	LCD_Draw_Dotline(10, 10, 100, 100, _RED);
+	LCD_Set_Bitmap((uint16_t *)imag_160x128);
 
 	LCD_GramRefresh();
 
