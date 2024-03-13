@@ -557,3 +557,15 @@ void LCD_7seg(uint16_t x, uint16_t y, int32_t value, int8_t digits, uint16_t col
 }
 
 /*--------------------------------------------------------------------------------*/
+
+void LCD_Set_ImagePart(uint16_t *data, uint16_t xs, uint16_t ys, uint16_t x, uint16_t y)
+{
+	for(int i = 0; i < ys; i++)
+	{
+		for(int j = 0; j < xs; j++)
+		{
+			L_FrameBuffer[(i+y)*LCD_WIDTH + (j+x)] = data[(i)*xs+(j)];
+		}
+	}
+}
+

@@ -41,4 +41,6 @@ void LCD_Draw_Dotline(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2, uint16_t c
 void LCD_Puts(uint16_t x, uint16_t y, char *text, uint16_t color);
 void LCD_7seg(uint16_t x, uint16_t y, int32_t value, int8_t digits, uint16_t color);
 
+void LCD_Set_ImagePart(uint16_t *data, uint16_t xs, uint16_t ys, uint16_t x, uint16_t y);
+
 #endif /* LCD_H_ */
