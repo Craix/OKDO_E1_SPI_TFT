@@ -285,9 +285,9 @@ static void LCD_InitReg(void){
 
 
 	LCD_WriteReg(0x36); 		//MX, MY, RGB mode
-	//LCD_WriteData_8Bit( 0x60);	//RGB color filter panel
+	LCD_WriteData_8Bit( 0x60);	//RGB color filter panel
 
-	LCD_WriteData_8Bit(0xA0);
+	//LCD_WriteData_8Bit(0xA0);
 }
 
 /*--------------------------------------------------------------------------------*/

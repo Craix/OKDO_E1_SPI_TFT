@@ -86,6 +86,8 @@ int main(void)
 
 	LCD_Set_ImagePart(out[0], 16, 16, 16, 16);
 
+	LCD_Draw_Line(0,0, 50,50,_RED);
+
 	LCD_GramRefresh();
 
 	while(1)
